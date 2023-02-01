@@ -1,38 +1,52 @@
-.App {
+* {
+  font-family: sans-serif;
+}
+
+.products {
+  margin: 20px;
+  padding: 2px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.product__single {
+  height: 150px;
+  padding: 20px;
+  background-color: rgb(205, 205, 205);
+  border-radius: 10px;
+  /* margin-bottom: 10px; */
   text-align: center;
+  cursor: pointer;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.product__single > img {
+  width: 100%; /*width of span */
+  height: 95%;
+  object-fit: cover;
+  margin-bottom: 3px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.pagination {
+  padding: 10px;
+  margin: 15px 0;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.pagination > span {
+  padding: 20px;
+  border: 1px solid rgb(205, 205, 205);
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.paginationSelected {
+  background-color: rgb(205, 205, 205);
+}
+
+/* we want ki jb last page toh "NEXT WALA OPTION VIIBLE NA " */
+
+.pagination_disabled {
+  opacity: 0;
 }
